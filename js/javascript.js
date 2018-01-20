@@ -102,7 +102,7 @@ var persons = [
 
 				{
 					id: 10,
-					name: '	Lisa',
+					name: 'Lisa',
 					surname:'Conor',
 					age: 21,
 					gender: "female",
@@ -113,8 +113,8 @@ var persons = [
 
 				{
 					id: 11,
-					name: '	Lisa',
-					surname:'Conor',
+					name: 'Sophia',
+					surname:'Jones',
 					age: 29,
 					gender: "female",
 					img: "img/w4.jpg",
