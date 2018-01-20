@@ -137,7 +137,7 @@ var persons = [
 
 $(document).ready(function(){
 
-  	var html = "";               // outpoting persons with ID's
+  	var html = "";               // outputing persons with there data and giving some divs ID's so we minipulate later
 
 	for (var i = 0; i < persons.length; i++) {
 		html += '<div class="'+persons[i].gender+' col-lg-3 col-md-6 col-12">';
@@ -181,30 +181,30 @@ $(document).ready(function(){
 
 	$('.all').click(function(){ // Sorting people by gender 
  
-		$('.welcoming').removeAttr('id');
+		$('.welcoming').removeAttr('id'); // removing id so the big person disapper
 		var div = "<h1>Welcome to coders<br>dating</h1>";
-		$(".welcoming").html(div)
-		$(".male , .female").css("display","block");
+		$(".welcoming").html(div)                        // h1 comes back again
+ 		$(".male , .female").css("display","block");  // display both genders 
 
 	})
 
 	$('.only_female').click(function(){
 
-		$('.welcoming').removeAttr('id'); 
+		$('.welcoming').removeAttr('id');                 
 		var div = "<h1>Welcome to coders<br>dating</h1>";
 		$(".welcoming").html(div)
-		$(".male").css("display","none");
-		$(".female").css("display","block");
+		$(".male").css("display","none"); // same before we just hide males
+		$(".female").css("display","block"); // and show only  females
 
 	})
 
 	$('.only_male').click(function(){
 
-		$('.welcoming').removeAttr('id');
+		$('.welcoming').removeAttr('id'); 
 		var div = "<h1>Welcome to coders<br>dating</h1>";
 		$(".welcoming").html(div)
-		$(".female").css("display","none");
-		$(".male").css("display","block");
+		$(".female").css("display","none"); // hide females
+		$(".male").css("display","block"); // show males
 
 	})
 
@@ -220,13 +220,13 @@ $(document).ready(function(){
 
 		$(".male , .female").css("display","block"); // display everything incase there is something hidden
 
-		$("#"+id).parent().css("display","none"); //hide the whole div
+		$("#"+id).parent().css("display","none"); // hide the whole div
 
-		$('.welcoming').attr('id', 'welcoming'); //add id with value of welcoming for styling
+		$('.welcoming').attr('id', 'welcoming'); // add id with value of welcoming for styling
 
 		for (var i = 0; i < persons.length; i++) {
 
-			if (persons[i].id == id) { //we use the id that we captured above 
+			if (persons[i].id == id) { // we use the id that we captured above 
 				
 				div += '<div class="col-lg-12 col-md-12 col-12">';
 					div += '<div id="'+persons[i].id+'" class="person row">';
